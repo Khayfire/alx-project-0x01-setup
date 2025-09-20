@@ -12,7 +12,7 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
       <Header />
       <main className="p-4">
         <div className="flex justify-between">
-          <h1 className=" text-2xl font-semibold">Users List</h1>
+          <h1 className="text-2xl font-semibold">Users List</h1>
           <button className="bg-blue-700 px-4 py-2 rounded-full text-white">
             Add User
           </button>
