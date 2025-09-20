@@ -1,4 +1,6 @@
-// Post interfaces
+// interfaces/index.ts
+
+// For posts
 export interface PostProps {
   userId: number;
   id: number;
@@ -18,7 +20,7 @@ export interface PostModalProps {
   onSubmit: (post: PostData) => void;
 }
 
-// User interfaces
+// For users
 export interface UserProps {
   id: number;
   name: string;
@@ -43,31 +45,8 @@ export interface UserProps {
   };
 }
 
-export interface UserData {
-  id?: number;
-  name: string;
-  username: string;
-  email: string;
-  address: {
-    street: string;
-    suite: string;
-    city: string;
-    zipcode: string;
-    geo: {
-      lat: string;
-      lng: string;
-    };
-  };
-  phone: string;
-  website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
-}
-
+// For User Modal
 export interface UserModalProps {
   onClose: () => void;
-  onSubmit: (user: UserData) => void;
+  onSubmit: (post: UserProps) => void; // ✅ required line
 }
