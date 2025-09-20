@@ -1,3 +1,4 @@
+// Post interfaces
 export interface PostProps {
   userId: number;
   id: number;
@@ -5,6 +6,19 @@ export interface PostProps {
   body: string;
 }
 
+export interface PostData {
+  userId: number;
+  id?: number;
+  title: string;
+  body: string;
+}
+
+export interface PostModalProps {
+  onClose: () => void;
+  onSubmit: (post: PostData) => void;
+}
+
+// User interfaces
 export interface UserProps {
   id: number;
   name: string;
@@ -27,18 +41,6 @@ export interface UserProps {
     catchPhrase: string;
     bs: string;
   };
-}
-
-export interface PostData {
-  userId: number;
-  id?: number;
-  title: string;
-  body: string;
-}
-
-export interface PostModalProps {
-  onClose: () => void;
-  onSubmit: (post: PostData) => void;
 }
 
 export interface UserData {
